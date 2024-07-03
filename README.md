@@ -14,7 +14,7 @@
 
 </div>
 <div align=center>
-<img src="https://github.com/gy65896/Histoformer/assets/eccv2024_cover.jpg" width="720">
+<img src="assets/eccv2024_cover.jpg" width="720">
 </div>
 
 ---
