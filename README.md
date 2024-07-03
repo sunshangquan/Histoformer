@@ -6,7 +6,7 @@
 ![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)
 ![poster](https://img.shields.io/badge/Histoformer-poster-green.svg)
 ![video](https://img.shields.io/badge/Histoformer-video-orange.svg)
-[![](https://img.shields.io/badge/supplementary-material-purple)](https://sunsean21.github.io/resources/eccv2024_supp.pdf)     
+[![](https://img.shields.io/badge/Histoformer-supp-purple)](https://sunsean21.github.io/resources/eccv2024_supp.pdf)     
 [![](https://img.shields.io/badge/chinese_blog-zhihu-blue.svg)]() 
 [![Closed Issues](https://img.shields.io/github/issues-closed/sunshangquan/Histoformer)](https://github.com/sunshangquan/Histoformer/issues?q=is%3Aissue+is%3Aclosed) 
 [![Open Issues](https://img.shields.io/github/issues/sunshangquan/Histoformer)](https://github.com/sunshangquan/Histoformer/issues) 
