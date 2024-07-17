@@ -65,14 +65,16 @@ See [INSTALL.md](INSTALL.md) for the installation of dependencies required to ru
 
 1. Download [Training set](https://drive.google.com/file/d/1tfeBnjZX1wIhIFPl6HOzzOKOyo0GdGHl/view?usp=sharing) or each of them, i.e., [Snow100K](https://sites.google.com/view/yunfuliu/desnownet), [Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), and [RainDrop](https://github.com/rui1996/DeRaindrop).
 
-2. To train Histoformer with default settings, run
+2. Modify the configurations of ```dataroot_gt``` and ```dataroot_lq``` for ```train```, ```val_snow_s```, ```val_snow_l```, ```val_test1``` and ```val_raindrop``` in [Allweather/Options/Allweather_Histoformer.yml](Allweather/Options/Allweather_Histoformer.yml)
+
+3. To train Histoformer with default settings, run
 ```
 cd Histoformer
 ./train.sh Allweather/Options/Allweather_Histoformer.yml 4321
 ```
 
 **Note:** The above training script uses 4 GPUs by default. 
-To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allweather/Options/Allweather_Histoformer.yml](Options/Allweather_Histoformer.yml)
+To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allweather/Options/Allweather_Histoformer.yml](Allweather/Options/Allweather_Histoformer.yml)
 
 ## Evaluation
 
