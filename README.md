@@ -37,6 +37,8 @@ reduce computational load. However, such a compromise results in limitations in 
 All visual results are in [Google Drive](https://drive.google.com/drive/folders/1adPVQXePgkhC1Ci82_a6vK6JfMa_KX5m?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1X8zWxmZUdd_CRcQAZOxr3w?pwd=ps9q) (pin: ```ps9q```). 
 You can also find each of them from the table below.
 
+<div align="center">
+    
 | Method | RainDrop | Outdoor-Rain | Snow100K-L | Snow100K-S  | RealSnow |
 |:---------------:|:-----------------:|:-----------------:|:-----------------:|:------------------:|:------------------:|
 | [TransWeather](https://drive.google.com/drive/folders/1Ptg1t-6UQIXbXstF2vyJM_POjlCfA8Gt?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1ZfZcdbFUoKsVuVDGZMRt23fB2s1eQbu9?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1zecSVNMTXdIjOtYs5K4NyLjeeljCyj17?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1OjNgaj3FebO6PegWjphd9pFgbBwfaiYZ/view?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1GGWlRLEJ1dKGW8GyMVDkWTmRwgjiE_Hh/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1kBbPHyNU3wYdGKbTGK0sjnk02s-gLwRx?usp=drive_link>) | 
@@ -44,6 +46,7 @@ You can also find each of them from the table below.
 | [Chen et al.](https://drive.google.com/drive/folders/1U9lfCsT6ydm_aP4e20lecLyOm9-nTSk4?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1Xy_V3PU5zvxsiklW8YMWympIEKP5Y92L?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1Ri_ridnMJX7S0gEIbJ6v07WQSaGtfqAB?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1TPNBMVQkGf6cNijvsDrGDIuNBZs59drw/view?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1np_l_Ccs-tsF36AyJTa7x6R9W-hp3Mhi/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1V6y3Q1AoRD7uGvPFFvH0OiG47tSRVOQd?usp=drive_link>) |  
 | [WeatherDiff](https://drive.google.com/drive/folders/1RoMark7UbGB3sOlCEP4hyCiyZyRYg7td?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1GUc1d03yUilfMqDNIlNB5ZDc8LbKWRav?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/10obRn4-ZjuB_4-Gz492T-2_41oVdZvky?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1TzHwtCiG8S1O2f2hkQsjyDBAgIOvQhp3/view?usp=drive_link>) | [Results](<>) | [Results](<https://drive.google.com/drive/folders/1B8D75MowIAjxL17WkukpxjEcW3wi6k-i?usp=drive_link>) | 
 | [Histoformer](https://drive.google.com/drive/folders/1Yu6rDU4fCxtddLCsllHIT1OVUXpkhy8h?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1BducWzQ3AbVahMI2pCJOErajJLvuF3Dh?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1GI8yv9j6sF-nQi7OhNjOFA2PcoFN5jy3?usp=drive_link>) | [Results](<https://drive.google.com/file/d/18lJLDfpNNvqZ_5x8y9WYYmtb9jFmBEBD/view?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1LvtLkRau8EtRTsbVGceR0JVO_XoXcGz1/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1Ia5b3nEL3nJr8mphHhexHLTai1z5Xd3o?usp=drive_link>) | 
+</div>
 
 Examples:
 
