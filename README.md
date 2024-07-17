@@ -26,13 +26,13 @@ Cover figure | Network structure
 reduce computational load. However, such a compromise results in limitations in capturing long-range spatial features. Inspired by the observation that the weather-induced degradation factors mainly cause similar occlusion and brightness, in this work, we propose an efficient Histogram Transformer (Histoformer) for restoring images affected by adverse weather. It is powered by a mechanism dubbed histogram self-attention, which sorts and segments spatial features into intensity-based bins. Self-attention is then applied across bins or within each bin to selectively focus on spatial features of dynamic range and process similar degraded pixels of the long range together. To boost histogram self-attention, we present a dynamic-range convolution enabling conventional convolution to conduct operation over similar pixels rather than neighbor pixels. We also observe that the common pixel-wise losses neglect linear association and correlation between output and ground-truth. Thus, we propose to leverage the Pearson correlation coefficient as a loss function to enforce the recovered pixels following the identical order as ground-truth. Extensive experiments demonstrate the efficacy and superiority of our proposed method. We have released the codes in Github*
 ---
 
-## News 🚀
+## 🚀 News
 * **2024.07.18**: Codes and [pre-trained weights](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) are released.
 * **2024.07.17**: [Visual results](https://github.com/sunshangquan/Histoformer?tab=readme-ov-file#visual-results) are released.
 * **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
 
-## Visual Results
+## Visual Results :smile:
 
 All visual results are in [Google Drive](https://drive.google.com/drive/folders/1adPVQXePgkhC1Ci82_a6vK6JfMa_KX5m?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1X8zWxmZUdd_CRcQAZOxr3w?pwd=ps9q) (pin: ```ps9q```). 
 You can also find each of them from the table below.
@@ -57,11 +57,11 @@ RainDrop | Outdoor-Rain
 :-------------------------:|:-------------------------:
 Snow100K-L | RealSnow 
 
-## Installation
+## :gear: Installation
 
 See [INSTALL.md](INSTALL.md) for the installation of dependencies required to run Histoformer.
 
-## Training
+## :hammer_and_wrench: Training
 
 1. Download [Training set](https://drive.google.com/file/d/1tfeBnjZX1wIhIFPl6HOzzOKOyo0GdGHl/view?usp=sharing) or each of them, i.e., [Snow100K](https://sites.google.com/view/yunfuliu/desnownet), [Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), and [RainDrop](https://github.com/rui1996/DeRaindrop).
 
@@ -76,7 +76,7 @@ cd Histoformer
 **Note:** The above training script uses 4 GPUs by default. 
 To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allweather/Options/Allweather_Histoformer.yml](Allweather/Options/Allweather_Histoformer.yml)
 
-## Evaluation
+## :balance_scale: Evaluation
 
 0. ```cd Allweather```
 
@@ -92,9 +92,19 @@ python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --wei
 python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_real.pth --yaml_file Options/Allweather_Histoformer.yml
 ```
 
+## :balance_scale: Demo
 
+0. ```cd Allweather```
 
-## Citation :mega: 
+1. Download the pre-trained [models](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) and place it in `./pretrained_models/`
+
+2. Testing with the replaced argument ```--input_dir [INPUT_FOLDER]```
+```
+# for realsnow
+python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_real.pth --yaml_file Options/Allweather_Histoformer.yml
+```
+
+## :mega: Citation
 If you use Restormer, please consider citing:
 
     @misc{sun2024restoring,
@@ -106,7 +116,7 @@ If you use Restormer, please consider citing:
     primaryClass={cs.CV}
 }
 
-## Contact :mailbox_with_mail: 
+## :mailbox_with_mail: Contact 
 If you have any question, please contact shangquansun@gmail.com
 
 **Acknowledgment:** This code is based on the [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
