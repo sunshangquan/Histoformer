@@ -3,7 +3,7 @@
 <div align="center">
  
 [![paper](https://img.shields.io/badge/Histoformer-paper-blue.svg)](https://export.arxiv.org/abs/2407.10172)
-[![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)]https://export.arxiv.org/abs/2407.10172
+[![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)](https://export.arxiv.org/abs/2407.10172)
 ![poster](https://img.shields.io/badge/Histoformer-poster-green.svg)
 ![video](https://img.shields.io/badge/Histoformer-video-orange.svg)
 [![](https://img.shields.io/badge/Histoformer-supp-purple)](https://sunsean21.github.io/resources/eccv2024_supp.pdf)     
