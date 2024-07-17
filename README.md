@@ -68,7 +68,7 @@ See [INSTALL.md](INSTALL.md) for the installation of dependencies required to ru
 2. To train Histoformer with default settings, run
 ```
 cd Histoformer
-./train.sh Allweather/Options/Allweather_Histoformer.yml
+./train.sh Allweather/Options/Allweather_Histoformer.yml 4321
 ```
 
 **Note:** The above training script uses 4 GPUs by default. 
