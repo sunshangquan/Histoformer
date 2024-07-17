@@ -14,7 +14,7 @@
 
 </div>
 
-<img src="assets/eccv2024_cover.jpg" width="380"> |  <img src="assets/histoformer.png" width="380"> |  
+<img src="assets/eccv2024_cover.jpg" width="385"> |  <img src="assets/histoformer.png" width="385"> |  
 :-------------------------:|:-------------------------:
 Cover figure | Network structure
 
@@ -48,12 +48,12 @@ You can also find each of them from the table below.
 Examples:
 
 
-[<img src="assets/example-RainDrop.png" width="380">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="380">](https://imgsli.com/Mjc5ODIy)
+[<img src="assets/example-RainDrop.png" width="385">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="385">](https://imgsli.com/Mjc5ODIy)
 :-------------------------:|:-------------------------:
 RainDrop | Outdoor-Rain 
 
 
-[<img src="assets/example-Snow100K-L.png" width="380">](https://imgsli.com/Mjc5ODMw) | [<img src="assets/example-RealSnow.png" width="380">](https://imgsli.com/Mjc5ODMz)
+[<img src="assets/example-Snow100K-L.png" width="385">](https://imgsli.com/Mjc5ODMw) | [<img src="assets/example-RealSnow.png" width="385">](https://imgsli.com/Mjc5ODMz)
 :-------------------------:|:-------------------------:
 Snow100K-L | RealSnow 
 
@@ -76,14 +76,14 @@ To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allwe
 
 ## Evaluation
 
+0. ```cd Allweather```
+
 1. Download the pre-trained [models](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) and place it in `./pretrained_models/`
 
 2. Download test datasets from each of them, i.e., [Snow100K](https://sites.google.com/view/yunfuliu/desnownet), [Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), and [RainDrop](https://github.com/rui1996/DeRaindrop).
 
 3. Testing with the replaced argument ```--input_dir [INPUT_FOLDER]```
 ```
-cd Allweather
-
 python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_best.pth --yaml_file Options/Allweather_Histoformer.yml
 
 # for realsnow
