@@ -28,4 +28,15 @@ reduce computational load. However, such a compromise results in limitations in 
 ## News 🚀
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
 
-Coming soon!
+## Visual Results
+| Method | RainDrop-a | RainDrop-b | Outdoor-Rain | Snow100K | Real Snow |
+|:---------------:|:-----------------:|:-----------------:|:-----------------:|:------------------:|:------------------:|
+| Input | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) |
+| Restormer | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
+| TransWeather | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
+| WGWSNet | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) |
+| Chen et al. | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) |  
+| WeatherDiff | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
+| Histoformer | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
+
+In progress!
