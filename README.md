@@ -14,7 +14,9 @@
 
 </div>
 <div align=center>
-<img src="assets/eccv2024_cover.jpg" width="720">
+<img src="assets/eccv2024_cover.jpg" width="360"> |  <img src="assets/histoformer.png" width="360"> |  
+:-------------------------:|:-------------------------:
+Cover figure | Network structure
 </div>
 
 ---
@@ -27,18 +29,83 @@ reduce computational load. However, such a compromise results in limitations in 
 
 ## News 🚀
 * **2024.07.18**: Codes and pre-trained weights are released.
-* **2024.07.17**: Visual results are released.
-* **2024.07.14**: Arxiv Paper is released.
+* **2024.07.17**: [Visual results](https://github.com/sunshangquan/Histoformer?tab=readme-ov-file#visual-results) are released.
+* **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
 
 ## Visual Results
-| Method | RainDrop-a| Outdoor-Rain | Snow100K-L | Snow100K-S  | RealSnow |
+
+All visual results are in [Google Drive](https://drive.google.com/drive/folders/1adPVQXePgkhC1Ci82_a6vK6JfMa_KX5m?usp=drive_link) and [Baidu Disk](). 
+You can also find each of them from the table below.
+
+| Method | RainDrop | Outdoor-Rain | Snow100K-L | Snow100K-S  | RealSnow |
 |:---------------:|:-----------------:|:-----------------:|:-----------------:|:------------------:|:------------------:|
-| Restormer | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
-| TransWeather | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
-| WGWSNet | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) |
-| Chen et al. | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) |  
-| WeatherDiff | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
-| Histoformer | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
+| [TransWeather](https://drive.google.com/drive/folders/1Ptg1t-6UQIXbXstF2vyJM_POjlCfA8Gt?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1ZfZcdbFUoKsVuVDGZMRt23fB2s1eQbu9?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1zecSVNMTXdIjOtYs5K4NyLjeeljCyj17?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1OjNgaj3FebO6PegWjphd9pFgbBwfaiYZ/view?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1GGWlRLEJ1dKGW8GyMVDkWTmRwgjiE_Hh/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1kBbPHyNU3wYdGKbTGK0sjnk02s-gLwRx?usp=drive_link>) | 
+| [WGWSNet](https://drive.google.com/drive/folders/1iEaAQ3j1DN9jMp_NQB8QJ8ixP_fzM7kK?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/16KmSHDYJNaZiMQ6TLgVGdbOp4Sb4KdkX?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1OaFiRX3V5ySTa5KoJ9CBg0sj7AveDnkx?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1WE34HRm6Qx02tJ3rz2lHqQaCHXDHCfmH/view?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1u6K3Gbbm8iq2zSywA3i-a4L18QprH9EM/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1v2Z_KH0d9zeZFAgUCSuyJPbH_yKvffOL?usp=drive_link>) |
+| [Chen et al.](https://drive.google.com/drive/folders/1U9lfCsT6ydm_aP4e20lecLyOm9-nTSk4?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1Xy_V3PU5zvxsiklW8YMWympIEKP5Y92L?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1Ri_ridnMJX7S0gEIbJ6v07WQSaGtfqAB?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1TPNBMVQkGf6cNijvsDrGDIuNBZs59drw/view?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1np_l_Ccs-tsF36AyJTa7x6R9W-hp3Mhi/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1V6y3Q1AoRD7uGvPFFvH0OiG47tSRVOQd?usp=drive_link>) |  
+| [WeatherDiff](https://drive.google.com/drive/folders/1RoMark7UbGB3sOlCEP4hyCiyZyRYg7td?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1GUc1d03yUilfMqDNIlNB5ZDc8LbKWRav?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/10obRn4-ZjuB_4-Gz492T-2_41oVdZvky?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1TzHwtCiG8S1O2f2hkQsjyDBAgIOvQhp3/view?usp=drive_link>) | [Results](<>) | [Results](<https://drive.google.com/drive/folders/1B8D75MowIAjxL17WkukpxjEcW3wi6k-i?usp=drive_link>) | 
+| [Histoformer](https://drive.google.com/drive/folders/1Yu6rDU4fCxtddLCsllHIT1OVUXpkhy8h?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1BducWzQ3AbVahMI2pCJOErajJLvuF3Dh?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1GI8yv9j6sF-nQi7OhNjOFA2PcoFN5jy3?usp=drive_link>) | [Results](<>) | [Results](<https://drive.google.com/file/d/1LvtLkRau8EtRTsbVGceR0JVO_XoXcGz1/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1Ia5b3nEL3nJr8mphHhexHLTai1z5Xd3o?usp=drive_link>) | 
+
+Examples:
+
+### RainDrop
+
+[<img src="assets/example-RainDrop.png" width="360">](https://imgsli.com/Mjc5ODI4)
+
+### Outdoor-Rain
+[<img src="assets/example-Outdoor-Rain.png" width="360">](
+https://imgsli.com/Mjc5ODIy)
+
+
+## Installation
+
+See [INSTALL.md](INSTALL.md) for the installation of dependencies required to run Histoformer.
+
+## Training
+
+1. Download [Training set](https://drive.google.com/file/d/1tfeBnjZX1wIhIFPl6HOzzOKOyo0GdGHl/view?usp=sharing) or each of them, i.e., [Snow100K](https://sites.google.com/view/yunfuliu/desnownet), [Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), and [RainDrop](https://github.com/rui1996/DeRaindrop).
+
+2. To train Histoformer with default settings, run
+```
+cd Histoformer
+./train.sh Allweather/Options/Allweather_Histoformer.yml
+```
+
+**Note:** The above training script uses 4 GPUs by default. 
+To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allweather/Options/Allweather_Histoformer.yml](Options/Allweather_Histoformer.yml)
+
+## Evaluation
+
+1. Download the pre-trained [models](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) and place it in `./pretrained_models/`
+
+2. Download test datasets from each of them, i.e., [Snow100K](https://sites.google.com/view/yunfuliu/desnownet), [Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), and [RainDrop](https://github.com/rui1996/DeRaindrop).
+
+3. Testing with the replaced argument ```--input_dir [INPUT_FOLDER]```
+```
+python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_best.pth --yaml_file Options/Allweather_Histoformer.yml
+
+# for realsnow
+python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_real.pth --yaml_file Options/Allweather_Histoformer.yml
+```
+
+
+
+## Citation
+If you use Restormer, please consider citing:
+
+    @misc{sun2024restoring,
+    title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
+    author={Shangquan Sun and Wenqi Ren and Xinwei Gao and Rui Wang and Xiaochun Cao},
+    year={2024},
+    eprint={2407.10172},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+
+## Contact
+If you have any question, please contact shangquansun@gmail.com
+
+**Acknowledgment:** This code is based on the [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
+
 
 In progress!
