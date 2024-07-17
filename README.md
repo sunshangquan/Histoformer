@@ -48,14 +48,12 @@ You can also find each of them from the table below.
 Examples:
 
 
-[<img src="assets/example-RainDrop.png" width="360">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="360">](
-https://imgsli.com/Mjc5ODIy)
+[<img src="assets/example-RainDrop.png" width="360">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="360">](https://imgsli.com/Mjc5ODIy)
 :-------------------------:|:-------------------------:
 RainDrop | Outdoor-Rain 
 
 
-[<img src="assets/example-Snow100K-L.png" width="360">](https://imgsli.com/Mjc5ODMw) | [<img src="assets/example-RealSnow.png" width="360">](
-https://imgsli.com/Mjc5ODMz)
+[<img src="assets/example-Snow100K-L.png" width="360">](https://imgsli.com/Mjc5ODMw) | [<img src="assets/example-RealSnow.png" width="360">](https://imgsli.com/Mjc5ODMz)
 :-------------------------:|:-------------------------:
 Snow100K-L | RealSnow 
 
