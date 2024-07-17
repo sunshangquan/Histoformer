@@ -12,6 +12,8 @@
 [![Open Issues](https://img.shields.io/github/issues/sunshangquan/Histoformer)](https://github.com/sunshangquan/Histoformer/issues) 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsunshangquan%2FHistoformer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
+</div>
+
 <img src="assets/eccv2024_cover.jpg" width="360"> |  <img src="assets/histoformer.png" width="360"> |  
 :-------------------------:|:-------------------------:
 Cover figure | Network structure
@@ -48,10 +50,14 @@ Examples:
 
 [<img src="assets/example-RainDrop.png" width="360">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="360">](
 https://imgsli.com/Mjc5ODIy)
-|:---------------:|:-----------------:|
+:-------------------------:|:-------------------------:
 RainDrop | Outdoor-Rain 
 
 
+[<img src="assets/example-Snow100K-L.png" width="360">](https://imgsli.com/Mjc5ODMw) | [<img src="assets/example-RealSnow.png" width="360">](
+https://imgsli.com/Mjc5ODMz)
+:-------------------------:|:-------------------------:
+Snow100K-L | RealSnow 
 
 ## Installation
 
