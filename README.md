@@ -14,7 +14,7 @@
 
 </div>
 
-<img src="assets/eccv2024_cover.jpg" width="370"> |  <img src="assets/histoformer.png" width="370"> |  
+<img src="assets/eccv2024_cover.jpg" width="380"> |  <img src="assets/histoformer.png" width="380"> |  
 :-------------------------:|:-------------------------:
 Cover figure | Network structure
 
@@ -48,12 +48,12 @@ You can also find each of them from the table below.
 Examples:
 
 
-[<img src="assets/example-RainDrop.png" width="370">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="370">](https://imgsli.com/Mjc5ODIy)
+[<img src="assets/example-RainDrop.png" width="380">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="380">](https://imgsli.com/Mjc5ODIy)
 :-------------------------:|:-------------------------:
 RainDrop | Outdoor-Rain 
 
 
-[<img src="assets/example-Snow100K-L.png" width="370">](https://imgsli.com/Mjc5ODMw) | [<img src="assets/example-RealSnow.png" width="370">](https://imgsli.com/Mjc5ODMz)
+[<img src="assets/example-Snow100K-L.png" width="380">](https://imgsli.com/Mjc5ODMw) | [<img src="assets/example-RealSnow.png" width="380">](https://imgsli.com/Mjc5ODMz)
 :-------------------------:|:-------------------------:
 Snow100K-L | RealSnow 
 
