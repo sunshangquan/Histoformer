@@ -34,7 +34,7 @@ reduce computational load. However, such a compromise results in limitations in 
 
 ## Visual Results
 
-All visual results are in [Google Drive](https://drive.google.com/drive/folders/1adPVQXePgkhC1Ci82_a6vK6JfMa_KX5m?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1X8zWxmZUdd_CRcQAZOxr3w?pwd=ps9q)(pin: ```ps9q```). 
+All visual results are in [Google Drive](https://drive.google.com/drive/folders/1adPVQXePgkhC1Ci82_a6vK6JfMa_KX5m?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1X8zWxmZUdd_CRcQAZOxr3w?pwd=ps9q) (pin: ```ps9q```). 
 You can also find each of them from the table below.
 
 | Method | RainDrop | Outdoor-Rain | Snow100K-L | Snow100K-S  | RealSnow |
@@ -94,7 +94,7 @@ python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --wei
 
 
 
-## Citation
+## Citation :mega: 
 If you use Restormer, please consider citing:
 
     @misc{sun2024restoring,
@@ -106,7 +106,7 @@ If you use Restormer, please consider citing:
     primaryClass={cs.CV}
 }
 
-## Contact
+## Contact :mailbox_with_mail: 
 If you have any question, please contact shangquansun@gmail.com
 
 **Acknowledgment:** This code is based on the [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
