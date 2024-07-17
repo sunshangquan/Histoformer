@@ -32,7 +32,7 @@ reduce computational load. However, such a compromise results in limitations in 
 * **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
 
-## Visual Results :smile:
+## :smile: Visual Results 
 
 All visual results are in [Google Drive](https://drive.google.com/drive/folders/1adPVQXePgkhC1Ci82_a6vK6JfMa_KX5m?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1X8zWxmZUdd_CRcQAZOxr3w?pwd=ps9q) (pin: ```ps9q```). 
 You can also find each of them from the table below.
