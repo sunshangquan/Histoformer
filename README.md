@@ -12,12 +12,9 @@
 [![Open Issues](https://img.shields.io/github/issues/sunshangquan/Histoformer)](https://github.com/sunshangquan/Histoformer/issues) 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsunshangquan%2FHistoformer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-</div>
-<div align=center>
 <img src="assets/eccv2024_cover.jpg" width="360"> |  <img src="assets/histoformer.png" width="360"> |  
 :-------------------------:|:-------------------------:
 Cover figure | Network structure
-</div>
 
 ---
 >**Restoring Images in Adverse Weather Conditions via Histogram Transformer**<br>  Shangquan Sun, Wenqi Ren, Xinwei Gao, Rui Wang, Xiaochun Cao<br> 
@@ -28,7 +25,7 @@ reduce computational load. However, such a compromise results in limitations in 
 ---
 
 ## News 🚀
-* **2024.07.18**: Codes and pre-trained weights are released.
+* **2024.07.18**: Codes and [pre-trained weights](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) are released.
 * **2024.07.17**: [Visual results](https://github.com/sunshangquan/Histoformer?tab=readme-ov-file#visual-results) are released.
 * **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
@@ -48,13 +45,12 @@ You can also find each of them from the table below.
 
 Examples:
 
-### RainDrop
 
-[<img src="assets/example-RainDrop.png" width="360">](https://imgsli.com/Mjc5ODI4)
-
-### Outdoor-Rain
-[<img src="assets/example-Outdoor-Rain.png" width="360">](
+[<img src="assets/example-RainDrop.png" width="360">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="360">](
 https://imgsli.com/Mjc5ODIy)
+|:---------------:|:-----------------:|
+RainDrop | Outdoor-Rain 
+
 
 
 ## Installation
@@ -82,6 +78,8 @@ To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allwe
 
 3. Testing with the replaced argument ```--input_dir [INPUT_FOLDER]```
 ```
+cd Allweather
+
 python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_best.pth --yaml_file Options/Allweather_Histoformer.yml
 
 # for realsnow
@@ -107,5 +105,3 @@ If you have any question, please contact shangquansun@gmail.com
 
 **Acknowledgment:** This code is based on the [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
 
-
-In progress!
