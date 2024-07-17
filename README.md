@@ -2,8 +2,8 @@
 
 <div align="center">
  
-![paper](https://img.shields.io/badge/Histoformer-paper-blue.svg)
-![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)
+[![paper](https://img.shields.io/badge/Histoformer-paper-blue.svg)](https://export.arxiv.org/abs/2407.10172)
+[![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)]https://export.arxiv.org/abs/2407.10172
 ![poster](https://img.shields.io/badge/Histoformer-poster-green.svg)
 ![video](https://img.shields.io/badge/Histoformer-video-orange.svg)
 [![](https://img.shields.io/badge/Histoformer-supp-purple)](https://sunsean21.github.io/resources/eccv2024_supp.pdf)     
@@ -26,12 +26,14 @@ reduce computational load. However, such a compromise results in limitations in 
 ---
 
 ## News 🚀
+* **2024.07.18**: Codes and pre-trained weights are released.
+* **2024.07.17**: Visual results are released.
+* **2024.07.14**: Arxiv Paper is released.
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
 
 ## Visual Results
-| Method | RainDrop-a | RainDrop-b | Outdoor-Rain | Snow100K | Real Snow |
+| Method | RainDrop-a| Outdoor-Rain | Snow100K-L | Snow100K-S  | RealSnow |
 |:---------------:|:-----------------:|:-----------------:|:-----------------:|:------------------:|:------------------:|
-| Input | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) |
 | Restormer | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
 | TransWeather | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | 
 | WGWSNet | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) | [Results](<>) |
