@@ -5,8 +5,8 @@ Follow these intructions
 
 1. Clone our repository
 ```
-git clone https://github.com/swz30/Restormer.git
-cd Restormer
+git clone https://github.com/sunshangquan/Histoformer.git
+cd Histoformer
 ```
 
 2. Make conda environment
