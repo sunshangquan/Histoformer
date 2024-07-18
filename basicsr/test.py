@@ -2,7 +2,6 @@ import logging
 import torch
 from os import path as osp
 import sys
-sys.path.append("/home1/ssq/proj9_single_derain/histoformer_allweather/basicsr")
 
 from basicsr.data import create_dataloader, create_dataset
 from basicsr.models import create_model

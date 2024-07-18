@@ -5,7 +5,6 @@
 [![paper](https://img.shields.io/badge/Histoformer-paper-blue.svg)](https://arxiv.org/abs/2407.10172)
 [![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)](https://arxiv.org/abs/2407.10172)
 ![poster](https://img.shields.io/badge/Histoformer-poster-green.svg)
-![video](https://img.shields.io/badge/Histoformer-video-orange.svg)
 [![](https://img.shields.io/badge/Histoformer-supp-purple)](https://sunsean21.github.io/resources/pdf/eccv2024_supp.pdf)     
 [![](https://img.shields.io/badge/chinese_blog-zhihu-blue.svg)]() 
 [![Closed Issues](https://img.shields.io/github/issues-closed/sunshangquan/Histoformer)](https://github.com/sunshangquan/Histoformer/issues?q=is%3Aissue+is%3Aclosed) 
@@ -38,7 +37,7 @@ All visual results are in [Google Drive](https://drive.google.com/drive/folders/
 You can also find each of them from the table below.
 
 <div align="center">
-    
+
 | Method | RainDrop | Outdoor-Rain | Snow100K-L | Snow100K-S  | RealSnow |
 |:---------------:|:-----------------:|:-----------------:|:-----------------:|:------------------:|:------------------:|
 | [TransWeather](https://drive.google.com/drive/folders/1Ptg1t-6UQIXbXstF2vyJM_POjlCfA8Gt?usp=drive_link) | [Results](<https://drive.google.com/drive/folders/1ZfZcdbFUoKsVuVDGZMRt23fB2s1eQbu9?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1zecSVNMTXdIjOtYs5K4NyLjeeljCyj17?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1OjNgaj3FebO6PegWjphd9pFgbBwfaiYZ/view?usp=drive_link>) | [Results](<https://drive.google.com/file/d/1GGWlRLEJ1dKGW8GyMVDkWTmRwgjiE_Hh/view?usp=drive_link>) | [Results](<https://drive.google.com/drive/folders/1kBbPHyNU3wYdGKbTGK0sjnk02s-gLwRx?usp=drive_link>) | 
@@ -117,7 +116,7 @@ If you use Restormer, please consider citing:
     eprint={2407.10172},
     archivePrefix={arXiv},
     primaryClass={cs.CV}
-}
+    }
 
 ## :mailbox_with_mail: Contact 
 If you have any question, please contact shangquansun@gmail.com
