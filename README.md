@@ -4,6 +4,7 @@
  
 [![paper](https://img.shields.io/badge/Histoformer-paper-blue.svg)](https://arxiv.org/abs/2407.10172)
 [![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)](https://arxiv.org/abs/2407.10172)
+[![](https://img.shields.io/badge/project-page-red.svg)](https://sunsean21.github.io/restore-all-weather.html)
 ![poster](https://img.shields.io/badge/Histoformer-poster-green.svg)
 [![](https://img.shields.io/badge/Histoformer-supp-purple)](https://sunsean21.github.io/resources/pdf/eccv2024_supp.pdf)     
 [![](https://img.shields.io/badge/chinese_blog-zhihu-blue.svg)]() 
@@ -25,7 +26,7 @@ Cover figure | Network structure
 reduce computational load. However, such a compromise results in limitations in capturing long-range spatial features. Inspired by the observation that the weather-induced degradation factors mainly cause similar occlusion and brightness, in this work, we propose an efficient Histogram Transformer (Histoformer) for restoring images affected by adverse weather. It is powered by a mechanism dubbed histogram self-attention, which sorts and segments spatial features into intensity-based bins. Self-attention is then applied across bins or within each bin to selectively focus on spatial features of dynamic range and process similar degraded pixels of the long range together. To boost histogram self-attention, we present a dynamic-range convolution enabling conventional convolution to conduct operation over similar pixels rather than neighbor pixels. We also observe that the common pixel-wise losses neglect linear association and correlation between output and ground-truth. Thus, we propose to leverage the Pearson correlation coefficient as a loss function to enforce the recovered pixels following the identical order as ground-truth. Extensive experiments demonstrate the efficacy and superiority of our proposed method. We have released the codes in Github*
 ---
 
-## 🚀 News
+## :rocket: News
 * **2024.07.18**: Codes and [pre-trained weights](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) are released.
 * **2024.07.17**: [Visual results](https://github.com/sunshangquan/Histoformer?tab=readme-ov-file#visual-results) are released.
 * **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
