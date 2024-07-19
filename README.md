@@ -31,6 +31,7 @@ reduce computational load. However, such a compromise results in limitations in 
 * **2024.07.17**: [Visual results](https://github.com/sunshangquan/Histoformer?tab=readme-ov-file#visual-results) are released.
 * **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
+* **2024.03.01**: Histoformer is rejected by CVPR2024.
 
 ## :smile: Visual Results 
 
