@@ -109,7 +109,7 @@ python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --wei
 ```
 
 ## :mega: Citation
-If you use Restormer, please consider citing:
+If you use Histoformer, please consider citing:
 
     @misc{sun2024restoring,
     title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
