@@ -71,7 +71,7 @@ See [INSTALL.md](INSTALL.md) for the installation of dependencies required to ru
 
 1. Download [Training set](https://drive.google.com/file/d/1tfeBnjZX1wIhIFPl6HOzzOKOyo0GdGHl/view?usp=sharing) or each of them, i.e., [Snow100K](https://sites.google.com/view/yunfuliu/desnownet), [Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), and [RainDrop](https://github.com/rui1996/DeRaindrop).
 
-**Note:** The original link for downloading Snow100K has expired, you could refer to [[Issue#2]](https://github.com/sunshangquan/Histoformer/issues/2) for alternative download links.
+**Note:** The original link for downloading Snow100K has expired, so you could refer to [[Issue#2]](https://github.com/sunshangquan/Histoformer/issues/2) for alternative download links.
 
 2. Modify the configurations of ```dataroot_gt``` and ```dataroot_lq``` for ```train```, ```val_snow_s```, ```val_snow_l```, ```val_test1``` and ```val_raindrop``` in [Allweather/Options/Allweather_Histoformer.yml](Allweather/Options/Allweather_Histoformer.yml)
 
