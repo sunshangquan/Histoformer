@@ -27,7 +27,7 @@ reduce computational load. However, such a compromise results in limitations in 
 ---
 
 ## :rocket: News
-* **2024.07.23**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/2) for Snow100K.
+* **2024.07.23**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/2) for Snow100K as its original link expires.
 * **2024.07.18**: Codes and [pre-trained weights](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) are released.
 * **2024.07.17**: [Visual results](https://github.com/sunshangquan/Histoformer?tab=readme-ov-file#visual-results) are released.
 * **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
