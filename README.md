@@ -23,11 +23,22 @@ Cover figure | Network structure
 >European Conference on Computer Vision
 
 <details>
-<summary><strong>**Abstract**</strong> (click to expand) </summary>
-> *Transformer-based image restoration methods in adverse weather have achieved significant progress. Most of them use self-attention along the channel dimension or within spatially fixed-range blocks to
-reduce computational load. However, such a compromise results in limitations in capturing long-range spatial features. Inspired by the observation that the weather-induced degradation factors mainly cause similar occlusion and brightness, in this work, we propose an efficient Histogram Transformer (Histoformer) for restoring images affected by adverse weather. It is powered by a mechanism dubbed histogram self-attention, which sorts and segments spatial features into intensity-based bins. Self-attention is then applied across bins or within each bin to selectively focus on spatial features of dynamic range and process similar degraded pixels of the long range together. To boost histogram self-attention, we present a dynamic-range convolution enabling conventional convolution to conduct operation over similar pixels rather than neighbor pixels. We also observe that the common pixel-wise losses neglect linear association and correlation between output and ground-truth. Thus, we propose to leverage the Pearson correlation coefficient as a loss function to enforce the recovered pixels following the identical order as ground-truth. Extensive experiments demonstrate the efficacy and superiority of our proposed method. We have released the codes in Github*
+<summary><strong>Abstract</strong> (click to expand) </summary>
+Transformer-based image restoration methods in adverse weather have achieved significant progress. Most of them use self-attention along the channel dimension or within spatially fixed-range blocks to
+reduce computational load. However, such a compromise results in limitations in capturing long-range spatial features. Inspired by the observation that the weather-induced degradation factors mainly cause similar occlusion and brightness, in this work, we propose an efficient Histogram Transformer (Histoformer) for restoring images affected by adverse weather. It is powered by a mechanism dubbed histogram self-attention, which sorts and segments spatial features into intensity-based bins. Self-attention is then applied across bins or within each bin to selectively focus on spatial features of dynamic range and process similar degraded pixels of the long range together. To boost histogram self-attention, we present a dynamic-range convolution enabling conventional convolution to conduct operation over similar pixels rather than neighbor pixels. We also observe that the common pixel-wise losses neglect linear association and correlation between output and ground-truth. Thus, we propose to leverage the Pearson correlation coefficient as a loss function to enforce the recovered pixels following the identical order as ground-truth. Extensive experiments demonstrate the efficacy and superiority of our proposed method. We have released the codes in Github
 </details>
 
+## :mega: Citation
+If you use Histoformer, please consider citing:
+
+    @misc{sun2024restoring,
+    title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
+    author={Shangquan Sun and Wenqi Ren and Xinwei Gao and Rui Wang and Xiaochun Cao},
+    year={2024},
+    eprint={2407.10172},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+    }
 ---
 
 ## :rocket: News
@@ -121,17 +132,6 @@ Values may be slightly different because a) the images I upload are in JPG file 
 python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_real.pth --yaml_file Options/Allweather_Histoformer.yml
 ```
 
-## :mega: Citation
-If you use Histoformer, please consider citing:
-
-    @misc{sun2024restoring,
-    title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
-    author={Shangquan Sun and Wenqi Ren and Xinwei Gao and Rui Wang and Xiaochun Cao},
-    year={2024},
-    eprint={2407.10172},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-    }
 
 ## :mailbox_with_mail: Contact 
 If you have any question, please contact shangquansun@gmail.com
