@@ -132,5 +132,5 @@ If you use Histoformer, please consider citing:
 ## :mailbox_with_mail: Contact 
 If you have any question, please contact shangquansun@gmail.com
 
-**Acknowledgment:** This code is based on the [WeatherDiff](https://github.com/IGITUGraz/WeatherDiffusion) [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
+**Acknowledgment:** This code is based on the [WeatherDiff](https://github.com/IGITUGraz/WeatherDiffusion), [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
 
