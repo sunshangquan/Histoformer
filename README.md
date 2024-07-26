@@ -53,7 +53,6 @@ You can also find each of them from the table below.
 
 Examples:
 
-
 [<img src="assets/example-RainDrop.png" width="385">](https://imgsli.com/Mjc5ODI4) | [<img src="assets/example-Outdoor-Rain.png" width="385">](https://imgsli.com/Mjc5ODIy)
 :-------------------------:|:-------------------------:
 RainDrop | Outdoor-Rain 
@@ -92,7 +91,7 @@ To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allwe
 
 2. Download test datasets from each of them, i.e., [Snow100K](https://sites.google.com/view/yunfuliu/desnownet), [Outdoor-Rain](https://github.com/liruoteng/HeavyRainRemoval), and [RainDrop](https://github.com/rui1996/DeRaindrop).
 
-3. Testing with the replaced argument ```--input_dir [INPUT_FOLDER]```
+3. Test with the replaced argument ```--input_dir [INPUT_FOLDER]```
 ```
 python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_best.pth --yaml_file Options/Allweather_Histoformer.yml
 
@@ -104,7 +103,7 @@ python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --wei
 ```
 python compute_psnr.py --path1 [GT-PATH] --path2 [Restored-PATH]
 ```
-Values may be slightly different because a) the images I upload are in JPG file format for saving space, but the values reported are computed on the PNG-format images; b) some values are reported by previous works like WeatherDiff and may be slightly different from my reproduction.
+Values may be slightly different because a) the images I upload are in JPG file format for saving space, but the values reported are computed on the PNG-format images; b) some values are reported by previous works like WeatherDiff and may be slightly different from this reproduction.
 
 ## :balance_scale: Demo
 
@@ -112,7 +111,7 @@ Values may be slightly different because a) the images I upload are in JPG file 
 
 1. Download the pre-trained [models](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) and place it in `./pretrained_models/`
 
-2. Testing with the replaced argument ```--input_dir [INPUT_FOLDER]```
+2. Test with the replaced argument ```--input_dir [INPUT_FOLDER]```
 ```
 # for realsnow
 python test_histoformer.py --input_dir [INPUT_FOLDER] --result_dir result/ --weights pretrained_models/net_g_real.pth --yaml_file Options/Allweather_Histoformer.yml
@@ -133,5 +132,5 @@ If you use Histoformer, please consider citing:
 ## :mailbox_with_mail: Contact 
 If you have any question, please contact shangquansun@gmail.com
 
-**Acknowledgment:** This code is based on the [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
+**Acknowledgment:** This code is based on the [WeatherDiff](https://github.com/IGITUGraz/WeatherDiffusion) [Restormer](https://github.com/swz30/Restormer), [BasicSR](https://github.com/xinntao/BasicSR) toolbox and [HINet](https://github.com/megvii-model/HINet). 
 
