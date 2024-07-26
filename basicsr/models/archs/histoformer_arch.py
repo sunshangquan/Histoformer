@@ -1,8 +1,3 @@
-## Restormer: Efficient Transformer for High-Resolution Image Restoration
-## Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, and Ming-Hsuan Yang
-## https://arxiv.org/abs/2111.09881
-
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -86,14 +81,8 @@ class FeedForward(nn.Module):
 
         self.project_in = Conv2d(dim, hidden_features*2, kernel_size=1, bias=bias)
 
-#        self.dwconv = Conv2d(hidden_features, hidden_features, kernel_size=3, stride=1, padding=1, groups=hidden_features, bias=bias)
         self.dwconv_5 = Conv2d(hidden_features//4, hidden_features//4, kernel_size=5, stride=1, padding=2, groups=hidden_features//4, bias=bias)
         self.dwconv_dilated2_1 = Conv2d(hidden_features//4, hidden_features//4, kernel_size=3, stride=1, padding=2, groups=hidden_features//4, bias=bias, dilation=2)
-#        self.dwconv_dilated2_2 = Conv2d(hidden_features//2, hidden_features//2, kernel_size=3, stride=1, padding=2, groups=hidden_features//2, bias=bias, dilation=2)
-#        self.dwconv_dilated3_1 = Conv2d(hidden_features//2, hidden_features//2, kernel_size=5, stride=1, padding=4, groups=hidden_features//2, bias=bias, dilation=2)
-#        self.dwconv_dilated3_2 = Conv2d(hidden_features//2, hidden_features//2, kernel_size=3, stride=1, padding=3, groups=hidden_features//2, bias=bias, dilation=3)
-#        self.pconv = Conv2d(hidden_features, hidden_features, kernel_size=1, bias=bias)
-#        self.pool = nn.AvgPool2d( 3, stride=1, padding=1 , ceil_mode=False , count_include_pad=True , divisor_override=None )
         self.p_unshuffle = nn.PixelUnshuffle(2)
         self.p_shuffle = nn.PixelShuffle(2)
 
@@ -123,205 +112,7 @@ class FeedForward(nn.Module):
 
 
 ##########################################################################
-## Multi-DConv Head Transposed Self-Attention (MDTA)
-class Attention(nn.Module):
-    def __init__(self, dim, num_heads, bias):
-        super(Attention, self).__init__()
-        self.num_heads = num_heads
-        self.temperature = nn.Parameter(torch.ones(num_heads, 1, 1))
-
-        self.qkv = Conv2d(dim, dim*3, kernel_size=1, bias=bias)
-        self.qkv_dwconv = Conv2d(dim*3, dim*3, kernel_size=3, stride=1, padding=1, groups=dim*3, bias=bias)
-        self.project_out = Conv2d(dim, dim, kernel_size=1, bias=bias)
-
-        self.largest_factor = {}
-
-    def softmax_1(self, x, dim=-1):
-        logit = x.exp()
-        logit  = logit / (logit.sum(dim, keepdim=True) + 1)
-        return logit
-
-    def forward(self, x):
-        b,c,h,w = x.shape
-
-        qkv = self.qkv_dwconv(self.qkv(x))
-        q,k,v = qkv.chunk(3, dim=1)   
-        
-        q = rearrange(q, 'b (head c) h w -> b head c (h w)', head=self.num_heads)
-        k = rearrange(k, 'b (head c) h w -> b head c (h w)', head=self.num_heads)
-        v = rearrange(v, 'b (head c) h w -> b head c (h w)', head=self.num_heads)
-
-        q = torch.nn.functional.normalize(q, dim=-1)
-        k = torch.nn.functional.normalize(k, dim=-1)
-
-        attn = (q @ k.transpose(-2, -1)) * self.temperature
-#        attn = attn.softmax(dim=-1)
-        attn = self.softmax_1(attn, dim=-1)
-        out = (attn @ v)
-        
-        out = rearrange(out, 'b head c (h w) -> b (head c) h w', head=self.num_heads, h=h, w=w)
-
-        out = self.project_out(out)
-        return out
-
-class Attention_local(nn.Module):
-    def __init__(self, dim, num_heads, bias):
-        super(Attention_local, self).__init__()
-        self.num_heads = num_heads
-        self.temperature = nn.Parameter(torch.ones(num_heads, 1, 1))
-
-        self.qkv = Conv2d(dim, dim*3, kernel_size=1, bias=bias)
-        self.qkv_dwconv = Conv2d(dim*3, dim*3, kernel_size=3, stride=1, padding=1, groups=dim*3, bias=bias)
-        self.project_out = Conv2d(dim, dim, kernel_size=1, bias=bias)
-
-        self.largest_factor = {}
-    
-    def find_lagest_factor(self, l):
-        if l in self.largest_factor:
-            return self.largest_factor[l]
-        pass
-    def pad(self, x, factor, ds):
-        t_pad = []
-        for d in ds[::-1]:
-            if x.shape[d] % factor != 0:
-                t_pad.append(0)
-                t_pad.append((x.shape[d]//factor+1)*factor - x.shape[d])
-            else:
-                t_pad = t_pad + [0,0]
-        x = F.pad(x, t_pad, 'constant', 0)
-        return x, t_pad
-    def unpad(self, x, t_pad):
-        _, _, h, w = x.shape
-        if len(t_pad) == 0:
-            return x
-        elif len(t_pad) == 2:            
-            return x[:,:,:,t_pad[0]:h-t_pad[1]]
-        elif len(t_pad) == 4:
-            return x[:,:,t_pad[2]:h-t_pad[3],t_pad[0]:w-t_pad[1]]
-
-    def softmax_1(self, x, dim=-1):
-        logit = x.exp()
-        logit  = logit / (logit.sum(dim, keepdim=True) + 1)
-        return logit
-    
-    def forward(self, x):
-        factor = 4
-        b,c,_,_ = x.shape
-        qkv1 = self.qkv_dwconv(self.qkv(x))
-        q1,k1,v1 = qkv1.chunk(3, dim=1)   
-        q1, t_pad = self.pad(q1, factor, [2, 3])
-        k1, t_pad = self.pad(k1, factor, [2, 3])
-        v1, t_pad = self.pad(v1, factor, [2, 3])
-        _,_,h,w = q1.shape
-        h1, w1 = h//factor, w//factor
-        q1 = rearrange(q1, 'b (head c) (h1 factory1) (w1 factorx1) -> b head (c factorx1 factory1) (h1 w1)', head=self.num_heads, factorx1=factor, factory1=factor)
-        k1 = rearrange(k1, 'b (head c) (h1 factory1) (w1 factorx1) -> b head (c factorx1 factory1) (h1 w1)', head=self.num_heads, factorx1=factor, factory1=factor)
-        v1 = rearrange(v1, 'b (head c) (h1 factory1) (w1 factorx1) -> b head (c factorx1 factory1) (h1 w1)', head=self.num_heads, factorx1=factor, factory1=factor)
-
-        q1 = torch.nn.functional.normalize(q1, dim=-1)
-        k1 = torch.nn.functional.normalize(k1, dim=-1)
-        attn1 = (q1 @ k1.transpose(-2, -1)) * self.temperature
-#        attn1 = attn1.softmax(dim=-1)
-        attn1 = self.softmax_1(attn1, dim=-1)
-        out1 = (attn1 @ v1)
-        out1 = rearrange(out1, 'b head (c factorx1 factory1) (h1 w1) -> b (head c) (h1 factory1) (w1 factorx1)', head=self.num_heads, factorx1=factor, factory1=factor, w1=w1, h1=h1)
-        out1 = self.unpad(out1, t_pad)
-        out = self.project_out(out1)
-        return out
-
-class Attention_global(nn.Module):
-    def __init__(self, dim, num_heads, bias):
-        super(Attention_global, self).__init__()
-        self.factor = 16
-        self.num_heads = num_heads
-        self.temperature = nn.Parameter(torch.ones(num_heads, 1, 1))
-
-        self.qkv = Conv2d(dim, dim*3, kernel_size=1, bias=bias)
-        self.qkv_dwconv = Conv2d(dim*3, dim*3, kernel_size=3, stride=1, padding=1, groups=dim*3, bias=bias)
-        self.project_out = Conv2d(dim, dim, kernel_size=1, bias=bias)
-    
-    def find_lagest_factor(self, l):
-        if l in self.largest_factor:
-            return self.largest_factor[l]
-        pass
-    def pad(self, x, factor, ds):
-        t_pad = []
-        for d in ds[::-1]:
-            if x.shape[d] % factor != 0:
-                t_pad.append(0)
-                t_pad.append((x.shape[d]//factor+1)*factor - x.shape[d])
-            else:
-                t_pad = t_pad + [0,0]
-        x = F.pad(x, t_pad, 'constant', 0)
-        return x, t_pad
-    def unpad(self, x, t_pad):
-        _, _, h, w = x.shape
-        if len(t_pad) == 0:
-            return x
-        elif len(t_pad) == 2:
-            return x[:,:,:,t_pad[0]:h-t_pad[1]]
-        elif len(t_pad) == 4:
-            return x[:,:,t_pad[2]:h-t_pad[3],t_pad[0]:w-t_pad[1]]
-
-    def softmax_1(self, x, dim=-1):
-        logit = x.exp()
-        logit  = logit / (logit.sum(dim, keepdim=True) + 1)
-        return logit
-
-    def forward(self, x):
-        b,c,_,_ = x.shape
-        x, t_pad = self.pad(x, self.factor, [2, 3])
-        qkv1 = self.qkv_dwconv(self.qkv(x))
-        q2,k2,v2 = qkv1.chunk(3, dim=1)
- 
-        q2 = F.pixel_unshuffle(q2, self.factor)
-        k2 = F.pixel_unshuffle(k2, self.factor)
-        v2 = F.pixel_unshuffle(v2, self.factor)
-        _, _, h, w = q2.shape
-        q2 = rearrange(q2, 'b (head c factory1 factorx1) h w -> b head (factorx1 factory1) (c h w)', head=self.num_heads, factorx1=self.factor, factory1=self.factor)
-        k2 = rearrange(k2, 'b (head c factory1 factorx1) h w -> b head (factorx1 factory1) (c h w)', head=self.num_heads, factorx1=self.factor, factory1=self.factor)
-        v2 = rearrange(v2, 'b (head c factory1 factorx1) h w -> b head (factorx1 factory1) (c h w)', head=self.num_heads, factorx1=self.factor, factory1=self.factor)
-        q2 = torch.nn.functional.normalize(q2, dim=-1)
-        k2 = torch.nn.functional.normalize(k2, dim=-1)
-        attn2 = (q2 @ k2.transpose(-2, -1)) * self.temperature
-#        attn2 = attn2.softmax(dim=-1)
-        attn2 = self.softmax_1(attn2, dim=-1)
-        out2 = (attn2 @ v2)
-        out2 = rearrange(out2, 'b head (factorx1 factory1) (c h w) -> b (head c factory1 factorx1) h w ', head=self.num_heads, factorx1=self.factor, factory1=self.factor, h=h, w=w)
-        out2 = F.pixel_shuffle(out2, self.factor)
-        out2 = self.unpad(out2, t_pad)
-
-        out = self.project_out(out2)
-        return out
-
-    '''
-    def forward(self, x):
-        factor = 4
-        b,c,_,_ = x.shape
-        x = self.pixelunshuffle(x)
-        qkv1 = self.qkv_dwconv(self.qkv(x))
-        q2,k2,v2 = qkv1.chunk(3, dim=1)
- 
-        q2, t_pad = self.pad(q2, factor, [2, 3])
-        k2, t_pad = self.pad(k2, factor, [2, 3])
-        v2, t_pad = self.pad(v2, factor, [2, 3])
-        _, _, h, w = q2.shape
-        h1, w1 = h//factor, w//factor
-        q2 = rearrange(q2, 'b (head c) (h1 factory1) (w1 factorx1) -> b head (h1 w1) (c factorx1 factory1)', head=self.num_heads, factorx1=factor, factory1=factor)
-        k2 = rearrange(k2, 'b (head c) (h1 factory1) (w1 factorx1) -> b head (h1 w1) (c factorx1 factory1)', head=self.num_heads, factorx1=factor, factory1=factor)
-        v2 = rearrange(v2, 'b (head c) (h1 factory1) (w1 factorx1) -> b head (h1 w1) (c factorx1 factory1)', head=self.num_heads, factorx1=factor, factory1=factor)
-        q2 = torch.nn.functional.normalize(q2, dim=-1)
-        k2 = torch.nn.functional.normalize(k2, dim=-1)
-        attn2 = (q2 @ k2.transpose(-2, -1)) * self.temperature
-#        attn2 = attn2.softmax(dim=-1)
-        attn2 = self.softmax_1(attn2, dim=-1)
-        out2 = (attn2 @ v2)
-        out2 = rearrange(out2, 'b head (h1 w1) (c factorx1 factory1) -> b (head c) (h1 factory1) (w1 factorx1) ', head=self.num_heads, factorx1=factor, factory1=factor, w1=w1, h1=h1)
-        out2 = self.unpad(out2, t_pad)
-
-        out = self.project_out(out2)
-        return out
-    '''
+## Dynamic-range Histogram Self-Attention (DHSA)
 
 class Attention_histogram(nn.Module):
     def __init__(self, dim, num_heads, bias, ifBox=True):
@@ -354,33 +145,7 @@ class Attention_histogram(nn.Module):
         mu = x.mean(-2, keepdim=True)
         sigma = x.var(-2, keepdim=True, unbiased=False)
         return (x - mu) / torch.sqrt(sigma+1e-5) #* self.weight + self.bias
-    '''
-    def forward(self, x):
-        b,c,h,w = x.shape
-        x, idx = x.view(b,-1).sort(dim=-1)
-        hw = x.shape[-1] // self.factor
-        shape_ori = "b (factor hw)" if self.ifBox else "b (hw factor)"
-        x = rearrange(x, '{} -> b factor hw 1'.format(shape_ori), factor=self.factor, hw=hw)
-
-        qkv1 = self.qkv(x)
-        q2,k2,v2 = qkv1.chunk(3, dim=1) # b,f,hw,1
-
-        shape_ori2 = "b (head c) hw 1"
-        q2 = rearrange(q2, '{} -> b head c hw'.format(shape_ori2), head=self.num_heads, hw=hw)
-        k2 = rearrange(k2, '{} -> b head c hw'.format(shape_ori2), head=self.num_heads, hw=hw)
-        v2 = rearrange(v2, '{} -> b head c hw'.format(shape_ori2), head=self.num_heads, hw=hw)
-        q2 = torch.nn.functional.normalize(q2, dim=-1)
-        k2 = torch.nn.functional.normalize(k2, dim=-1)
-        attn2 = (q2 @ k2.transpose(-2, -1)) * self.temperature
-        attn2 = self.softmax_1(attn2, dim=-1)
-        out2 = (attn2 @ v2)
-        out2 = rearrange(out2, 'b head c hw -> {}'.format(shape_ori2), head=self.num_heads, hw=hw)
-        out2 = out2.view(b,-1)
-        out2 = torch.scatter(out2, 1, idx, out2).view(b,c,h,w)
-
-        out = self.project_out(out2)
-        return out
-    '''
+    
 
     def reshape_attn(self, q, k, v, ifBox):
         b, c = q.shape[:2]
@@ -435,28 +200,17 @@ class TransformerBlock(nn.Module):
     def __init__(self, dim, num_heads, ffn_expansion_factor, bias, LayerNorm_type):
         super(TransformerBlock, self).__init__()
 
-#        self.norm0 = LayerNorm(dim, LayerNorm_type)
-#        self.attn = Attention(dim, num_heads, bias)
         self.attn_g = Attention_histogram(dim, num_heads, bias, True)
         self.norm_g = LayerNorm(dim, LayerNorm_type)
-#        self.attn_l = Attention_histogram(dim, num_heads, bias, False)
-#        self.norm_l = LayerNorm(dim, LayerNorm_type)
         self.ffn = FeedForward(dim, ffn_expansion_factor, bias)
-#        self.ffn2 = FeedForward(dim, ffn_expansion_factor, bias)
 
         self.norm_ff1 = LayerNorm(dim, LayerNorm_type)
-#        self.norm_ff2 = LayerNorm(dim, LayerNorm_type)
 
 
 
     def forward(self, x):
-#        x = x + self.attn(self.norm0(x))
         x = x + self.attn_g(self.norm_g(x))
-#        x2 = x + self.attn_l(self.norm_l(x))
         x_out = x + self.ffn(self.norm_ff1(x))
-#        x = x_out
-#        x = x + self.attn_g(self.norm_g(x))
-#        x_out = x + self.ffn2(self.norm_ff2(x))
 
         return x_out
 
@@ -615,9 +369,5 @@ class Histoformer(nn.Module):
 
         out_dec_level1 = self.output(out_dec_level1)
         return out_dec_level1 + inp_img
-#        if ifPred:
-#            return out_dec_level1[:,:-3] + inp_img, out_dec_level1[:,-3:].mean([2,3])
-#
-#        return out_dec_level1[:,:-3] + inp_img
         
 
