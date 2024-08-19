@@ -96,7 +96,8 @@ cd Histoformer
 ```
 
 **Note:** The above training script uses 4 GPUs by default. 
-To use any other settings, modify [Histoformer/train.sh](../train.sh) and [Allweather/Options/Allweather_Histoformer.yml](Allweather/Options/Allweather_Histoformer.yml)
+To use any other settings, for example 8 GPUs, modify ```CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7``` and ```--nproc_per_node=8``` in [Histoformer/train.sh](../train.sh) and ```num_gpu: 8``` [Allweather/Options/Allweather_Histoformer.yml](Allweather/Options/Allweather_Histoformer.yml).
+
 
 ## :balance_scale: Evaluation
 
