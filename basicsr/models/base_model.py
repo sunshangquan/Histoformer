@@ -8,8 +8,8 @@ import sys
 sys.path.append(os.path.realpath(__file__))
 
 
-from models import lr_scheduler as lr_scheduler
-from utils.dist_util import master_only
+from basicsr.models import lr_scheduler as lr_scheduler
+from basicsr.utils.dist_util import master_only
 
 logger = logging.getLogger('basicsr')
 

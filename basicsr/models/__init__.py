@@ -1,7 +1,7 @@
 import importlib
 from os import path as osp
 
-from utils import get_root_logger, scandir
+from basicsr.utils import get_root_logger, scandir
 
 # automatically scan and import model modules
 # scan all the files under the 'models' folder and collect files ending with
@@ -13,7 +13,7 @@ model_filenames = [
 ]
 # import all the model modules
 _model_modules = [
-    importlib.import_module(f'models.{file_name}')
+    importlib.import_module(f'basicsr.models.{file_name}')
     for file_name in model_filenames
 ]
 

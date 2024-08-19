@@ -11,7 +11,7 @@ import util
 from natsort import natsorted
 from glob import glob
 import sys
-sys.path.append("/home1/ssq/proj9_single_derain/histoformer_allweather")
+sys.path.append(os.path.join(os.getcwd(), ".."))
 from basicsr.models.archs.histoformer_arch import Histoformer
 from skimage import img_as_ubyte
 from pdb import set_trace as stx

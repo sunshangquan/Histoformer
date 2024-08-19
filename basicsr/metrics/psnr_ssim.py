@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from metrics.metric_util import reorder_image, to_y_channel
+from basicsr.metrics.metric_util import reorder_image, to_y_channel
 import skimage.metrics
 import torch
 
