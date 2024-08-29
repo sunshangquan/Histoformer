@@ -1,12 +1,12 @@
 from torch.utils import data as data
 from torchvision.transforms.functional import normalize
 
-from data.data_util import (paired_paths_from_folder,
+from basicsr.data.data_util import (paired_paths_from_folder,
                                     paired_DP_paths_from_folder,
                                     paired_paths_from_lmdb,
                                     paired_paths_from_meta_info_file)
-from data.transforms import augment, paired_random_crop, paired_random_crop_DP, random_augmentation
-from utils import FileClient, imfrombytes, img2tensor, padding, padding_DP, imfrombytesDP
+from basicsr.data.transforms import augment, paired_random_crop, paired_random_crop_DP, random_augmentation
+from basicsr.utils import FileClient, imfrombytes, img2tensor, padding, padding_DP, imfrombytesDP
 
 import random
 import numpy as np
@@ -136,6 +136,8 @@ class Dataset_PairedImage(data.Dataset):
             return 1
         elif 'rain' in img_name:
             return 2
+        else:
+            return 4
          
     def __len__(self):
         return len(self.paths)
