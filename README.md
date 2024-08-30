@@ -59,7 +59,7 @@ I have provided them below:
 
 | Snow100K Training | Snow100K Test Set | Snow100K Masks | Outdoor-Rain Test1|
 |:---------------:|:-----------------:|:-----------------:|:-----------------:|
-| [[Google Drive]](https://drive.google.com/file/d/1tfeBnjZX1wIhIFPl6HOzzOKOyo0GdGHl/view?usp=sharing) | [[Google Drive]](https://drive.google.com/drive/folders/1kLPWAev5f6OutKFALhxthuO1XCF5U1Yu) [[BaiduYun]](https://pan.baidu.com/s/1oiL0IrB1vWo902G-jWk8LA?pwd=yuia) [pin: ```yuia```] | [[Google Drive]](https://drive.google.com/drive/folders/11kGq5VB6hyEx-GTONvH9Z4cH7EhpjaJ_?usp=sharing) [[BaiduYun]](https://pan.baidu.com/s/1Il24NXXt748nsL2nLpXI3g?pwd=hstm) [pin: ```hstm```] | [[Google Drive]](https://drive.google.com/file/d/1xgLG6656ahL7TfpeO_TplkMOQrfdxKbo/view?usp=sharing) |
+| [[Google Drive]](https://drive.google.com/file/d/1tfeBnjZX1wIhIFPl6HOzzOKOyo0GdGHl/view?usp=sharing) | [[Google Drive]](https://drive.google.com/drive/folders/1kLPWAev5f6OutKFALhxthuO1XCF5U1Yu) [[BaiduYun Disk]](https://pan.baidu.com/s/1oiL0IrB1vWo902G-jWk8LA?pwd=yuia) [pin: ```yuia```] | [[Google Drive]](https://drive.google.com/drive/folders/11kGq5VB6hyEx-GTONvH9Z4cH7EhpjaJ_?usp=sharing) [[BaiduYun Disk]](https://pan.baidu.com/s/1Il24NXXt748nsL2nLpXI3g?pwd=hstm) [pin: ```hstm```] | [[Google Drive]](https://drive.google.com/file/d/1xgLG6656ahL7TfpeO_TplkMOQrfdxKbo/view?usp=sharing) |
 
 
 ## :smile: Visual Results 
