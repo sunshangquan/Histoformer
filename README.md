@@ -42,12 +42,25 @@ If you use Histoformer, please consider citing:
 ---
 
 ## :rocket: News
+* **2024.08.29**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/2) for Snow100K masks as its original link expires.
+* **2024.08.29**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/8) for Outdoor-Rain Test1 as its original link expires.
 * **2024.07.23**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/2) for Snow100K as its original link expires.
 * **2024.07.18**: Codes and [pre-trained weights](https://drive.google.com/drive/folders/1dmPhr8Z5iPRx9lh7TwdUFPSfwGIxp5l0?usp=drive_link) are released.
 * **2024.07.17**: [Visual results](https://github.com/sunshangquan/Histoformer?tab=readme-ov-file#smile-visual-results) are released.
 * **2024.07.14**: [Arxiv Paper](https://export.arxiv.org/abs/2407.10172) is released.
 * **2024.07.01**: Histoformer is accepted by ECCV2024.
 * **2024.03.01**: Histoformer is rejected by CVPR2024.
+
+
+## :jigsaw: Datasets
+
+According to [[Issue#2]](https://github.com/sunshangquan/Histoformer/issues/2) and [[Issue#8]](https://github.com/sunshangquan/Histoformer/issues/8), many related datasets are unavailable. 
+I have provided them below:
+
+| Snow100K Training | Snow100K Test Set | Snow100K Masks | Outdoor-Rain Test1|
+|:---------------:|:-----------------:|:-----------------:|:-----------------:|
+| [[Google Drive]](https://drive.google.com/file/d/1tfeBnjZX1wIhIFPl6HOzzOKOyo0GdGHl/view?usp=sharing) | [[Google Drive]](https://drive.google.com/drive/folders/1kLPWAev5f6OutKFALhxthuO1XCF5U1Yu) [[BaiduYun Disk]](https://pan.baidu.com/s/1oiL0IrB1vWo902G-jWk8LA?pwd=yuia) [pin: ```yuia```] | [[Google Drive]](https://drive.google.com/drive/folders/11kGq5VB6hyEx-GTONvH9Z4cH7EhpjaJ_?usp=sharing) [[BaiduYun Disk]](https://pan.baidu.com/s/1Il24NXXt748nsL2nLpXI3g?pwd=hstm) [pin: hstm] | [[Google Drive]](https://drive.google.com/file/d/1xgLG6656ahL7TfpeO_TplkMOQrfdxKbo/view?usp=sharing) |
+
 
 ## :smile: Visual Results 
 
