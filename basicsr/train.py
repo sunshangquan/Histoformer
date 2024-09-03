@@ -7,7 +7,7 @@ import time
 import torch
 from os import path as osp
 import os, sys
-sys.path.append(osp.join(os.path.realpath(__file__)))
+sys.path.append(osp.join(os.getcwd()))
 
 from data import create_dataloader, create_dataset
 from data.data_sampler import EnlargedSampler

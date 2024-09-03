@@ -5,7 +5,7 @@
 [![paper](https://img.shields.io/badge/Histoformer-paper-blue.svg)](https://arxiv.org/abs/2407.10172)
 [![arXiv](https://img.shields.io/badge/Histoformer-arXiv-red.svg)](https://arxiv.org/abs/2407.10172)
 [![](https://img.shields.io/badge/project-page-red.svg)](https://sunsean21.github.io/restore-all-weather.html)
-![poster](https://img.shields.io/badge/Histoformer-poster-green.svg)
+[![poster](https://img.shields.io/badge/Histoformer-poster-green.svg)](https://sunsean21.github.io/resources/pdf/poster_eccv24_histoformer.pdf)
 [![](https://img.shields.io/badge/Histoformer-supp-purple)](https://sunsean21.github.io/resources/pdf/eccv2024_supp.pdf)     
 [![](https://img.shields.io/badge/chinese_blog-zhihu-blue.svg)](https://zhuanlan.zhihu.com/p/709843922) 
 [![Closed Issues](https://img.shields.io/github/issues-closed/sunshangquan/Histoformer)](https://github.com/sunshangquan/Histoformer/issues?q=is%3Aissue+is%3Aclosed) 
@@ -31,13 +31,11 @@ reduce computational load. However, such a compromise results in limitations in 
 ## :mega: Citation
 If you use Histoformer, please consider citing:
 
-    @misc{sun2024restoring,
-    title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
-    author={Shangquan Sun and Wenqi Ren and Xinwei Gao and Rui Wang and Xiaochun Cao},
-    year={2024},
-    eprint={2407.10172},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+    @article{sun2024restoring,
+      title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
+      author={Sun, Shangquan and Ren, Wenqi and Gao, Xinwei and Wang, Rui and Cao, Xiaochun},
+      journal={arXiv preprint arXiv:2407.10172},
+      year={2024}
     }
 ---
 
