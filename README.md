@@ -31,32 +31,23 @@ reduce computational load. However, such a compromise results in limitations in 
 ## :mega: Citation
 If you use Histoformer, please consider citing:
 
+    @article{sun2024restoring,
+      title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
+      author={Sun, Shangquan and Ren, Wenqi and Gao, Xinwei and Wang, Rui and Cao, Xiaochun},
+      journal={arXiv preprint arXiv:2407.10172},
+      year={2024}
+    }
+    
     @InProceedings{10.1007/978-3-031-72670-5_7,
-        author="Sun, Shangquan
-        and Ren, Wenqi
-        and Gao, Xinwei
-        and Wang, Rui
-        and Cao, Xiaochun",
-        editor="Leonardis, Ale{\v{s}}
-        and Ricci, Elisa
-        and Roth, Stefan
-        and Russakovsky, Olga
-        and Sattler, Torsten
-        and Varol, G{\"u}l",
-        title="Restoring Images in Adverse Weather Conditions via Histogram Transformer",
+        author="Sun, Shangquan and Ren, Wenqi and Gao, Xinwei and Wang, Rui and Cao, Xiaochun",
+        editor="Leonardis, Ale{\v{s}} and Ricci, Elisa and Roth, Stefan and Russakovsky, Olga and Sattler, Torsten and Varol, G{\"u}l",
+        title="Restoring Images in Adverse Weather Conditions via Histogram Transformer",
         booktitle="Computer Vision -- ECCV 2024",
         year="2025",
         publisher="Springer Nature Switzerland",
         address="Cham",
         pages="111--129",
         isbn="978-3-031-72670-5"
-    }
-
-    @article{sun2024restoring,
-      title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
-      author={Sun, Shangquan and Ren, Wenqi and Gao, Xinwei and Wang, Rui and Cao, Xiaochun},
-      journal={arXiv preprint arXiv:2407.10172},
-      year={2024}
     }
 ---
 
