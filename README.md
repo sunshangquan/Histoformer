@@ -52,6 +52,7 @@ If you use Histoformer, please consider citing:
 ---
 
 ## :rocket: News
+* **2024.10.09**: Upload our work on [HuggingFace](https://huggingface.co/sunsean/Histoformer).
 * **2024.08.29**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/2) for Snow100K masks as its original link expires.
 * **2024.08.29**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/8) for Outdoor-Rain Test1 as its original link expires.
 * **2024.07.23**: Update alternative [[Download Links]](https://github.com/sunshangquan/Histoformer/issues/2) for Snow100K as its original link expires.
